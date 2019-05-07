@@ -73,7 +73,7 @@ getQuestion = function(){
 timer = function(){
     countDown--;
     $('#counter').text("Time remaining: "+countDown+" seconds left");
-    if (countDown==0){
+    if (countDown === 0){
         timeUp();
     }
 }
