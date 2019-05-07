@@ -57,6 +57,8 @@ createQuestArea = function(){
 }
 
 getQuestion = function(){
+    countDown = 20;
+    interval = setInterval(timer, 1000);
     question = questions[questionToGuess]["question"];
     answers = questions[questionToGuess]["answers"];
     correctAnswer = questions[questionToGuess]["correctAnswer"];
@@ -66,8 +68,6 @@ getQuestion = function(){
     for( i=0; i<answers.length; i++){
         card.append('<button class="btn btn-block bg-warning" style="margin: 20px" id="button" data-name="' +answers[i]+ '">'+answers[i]+'</button>');
     }
-    countDown = 21;
-    interval = setInterval(timer, 1000);
 }
 
 timer = function(){
